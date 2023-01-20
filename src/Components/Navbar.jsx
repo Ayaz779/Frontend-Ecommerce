@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  ${mobile({ paddingTop: "10px", display: "block" })}
+  ${mobile({ paddingTop: "10px", flexWrap:"wrap", justifyContent:"center" })}
   ${Tablet({ paddingTop: "10px", display: "block" })}
 `;
 
@@ -61,19 +61,19 @@ const Wrapper = styled.div`
 const Image = styled.img`
   width: 45px;
   height: 45px;
+  ${mobile({ marginLeft:"50px"})}
 `;
 
 const Center = styled.div`
   flex: 2;
   text-align: left;
-  ${mobile({ display: "inline-block", width: "50%" })}
   ${Tablet({ textAlign: "left",display: "inline-block" })}
   ${Large({ textAlign: "left" })}
 `;
 
 const Logo = styled.h1`
   font-style: italic;
-  ${mobile({ fontSize: "24px", marginTop: "10px" })}
+  ${mobile({ fontSize: "24px", marginTop: "10px"})}
 `;
 const Right = styled.div`
   flex: 1;
@@ -129,7 +129,7 @@ const Navbar = () => {
               />
             </SearchContainer>
           </Left> */}
-          <Image src={logo} />
+          <Image src={logo}/>
           <Center>
             <Logo>
               <Link to={"/"} style={{ textDecoration: "none", color: "black" }}>
