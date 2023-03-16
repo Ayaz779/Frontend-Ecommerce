@@ -31,7 +31,7 @@ const Products1 = (cat, filters, sort) => {
       try {
         const res = await axios.get(
           cat.cat
-            ? `http://localhost:4000/api/products?category=${cat.cat}`
+            ? `https://ecommerce-two-ruddy.vercel.app/api/products?category=${cat.cat}`
             : "https://ecommerce-two-ruddy.vercel.app/api/products"
         );
         setProducts(res.data);

@@ -64,7 +64,7 @@ const Pay = () => {
   const navigate = useNavigate();
 
   const handle_Submit = ()=>{
-    fetch("http://localhost:4000/api/payments", {
+    fetch("https://ecommerce-two-ruddy.vercel.app/api/payments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

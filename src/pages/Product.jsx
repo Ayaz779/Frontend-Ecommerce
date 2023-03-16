@@ -122,7 +122,7 @@ const Product = () => {
   useEffect(() => {
     const getProduct =  async ()=>{
       try {
-        const res = await axios.get("http://localhost:4000/api/products/find/"+id);
+        const res = await axios.get("https://ecommerce-two-ruddy.vercel.app/api/products/find/"+id);
         setProducts(res.data);
       } catch {}
     };

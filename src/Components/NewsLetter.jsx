@@ -51,7 +51,7 @@ const NewsLetter = () => {
     email:news4
   }
   const handle_news = ()=>{
-    fetch("http://localhost:4000/api/news", {
+    fetch("https://ecommerce-two-ruddy.vercel.app/api/news", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
