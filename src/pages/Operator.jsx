@@ -23,7 +23,7 @@ const Button = styled.button`
 const Operator = () => {
   const [listOfProducts, setProducts] = useState([]);
 
-  fetch("http://localhost:4000/api/products")
+  fetch("https://ecommerce-two-ruddy.vercel.app/api/products")
     .then((result) => {
       return result.json();
     })
