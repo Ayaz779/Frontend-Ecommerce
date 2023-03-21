@@ -11,6 +11,8 @@ import Cart from "./pages/Cart";
 import { useSelector } from 'react-redux';
 import Payment from "./pages/Payment";
 import Pay from "./Components/Pay";
+import Operator from "./pages/Operator";
+import Addproducts from "./pages/AddProduct";
 
 function App() {
   const user = useSelector((state)=> state.user.currentUser);
@@ -66,6 +68,8 @@ function App() {
         <Route path="/Pay2" element={<Pay2/>}></Route>
         <Route path="/external" element={<External/>}></Route>
         <Route path="/internal1" element={<Internal1/>}></Route>
+        <Route path="/operator" element={<Operator/>}></Route>
+        <Route path="/AddProducts" element={<Addproducts/>}></Route>
       </Routes>
     </>
   );

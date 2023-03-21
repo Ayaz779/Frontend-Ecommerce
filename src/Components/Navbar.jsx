@@ -102,13 +102,9 @@ const Button2 = styled.button`
 `;
 
 const Navbar = () => {
-  const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   const quantity = useSelector((state) => state.cart.quantity);
   const user1 = useSelector((state) => state.user.currentUser);
-  console.log(user1);
   const handlepurg = () => {
     persistor.purge();
     window.location.reload();
@@ -158,15 +154,15 @@ const Navbar = () => {
                 SIGNIN
               </Link>
             </MenuItem>
-            {/* {user1 ? (
+            {user1?.isAdmin ? (
               <MenuItem>
-                <Link to={"/Admin"} style={{ textDecoration: "none" }}>
-                  ADMIN
+                <Link to={"/operator"} style={{ textDecoration: "none" }}>
+                  OPERATOR
                 </Link>
               </MenuItem>
             ) : (
               <Button1>nothing</Button1>
-            )} */}
+            )}
             {user1 ? (
               <MenuItem>
                 <Button2 onClick={handlepurg}>LOGOUT</Button2>
