@@ -153,7 +153,7 @@ const Register = () => {
   let navigate = useNavigate();
   const handlesignup = (e) => {
     e.preventDefault();
-    fetch("http://localhost:4000/api/auth/register", {
+    fetch("https://ecommerce-two-ruddy.vercel.app/api/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
