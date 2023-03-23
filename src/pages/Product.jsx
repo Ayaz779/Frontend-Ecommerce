@@ -108,6 +108,9 @@ const Button = styled.button`
     background-color:#f8f4f4;
  }
 `;
+const Out = styled.span`
+width: 100px;
+`;
 
 const Product = () => {
   const location = useLocation();
@@ -174,6 +177,7 @@ const Product = () => {
                 <Add onClick={()=>handleQuantity("inc")}/>
             </AmountContainer>
             <Button onClick={handleCart}>Add To Cart</Button>
+            <Out>{product.out}</Out>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
